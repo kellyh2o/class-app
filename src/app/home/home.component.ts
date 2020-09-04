@@ -9,6 +9,7 @@ export class HomeComponent implements OnInit {
   title = 'Hero Dashboard';
   subTitle = 'Rent a Hero';
   isAuth: boolean;
+  arrived: string;
 
   budget = '7000000000';
 
@@ -33,5 +34,9 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
     this.isAuth = true;
+  }
+
+  hasArrived(event: string) {
+    this.arrived = event;
   }
 }

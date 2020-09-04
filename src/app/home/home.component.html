@@ -4,9 +4,12 @@
     [title]="title" 
     [subTitle]="subTitle" 
     [isAuth]="isAuth"
+    (arrived)="hasArrived($event)"
 ></app-header>
 
 <!-- body -->
+
+<p>{{ arrived }}</p>
 
 <p>Budget: {{ budget | currency }}</p>
 

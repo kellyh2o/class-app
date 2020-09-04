@@ -13,9 +13,12 @@ export class HeaderComponent implements OnInit {
   @Input() subTitle: string;
   @Input() isAuth: boolean;
 
+  @Output() arrived: EventEmitter<string> = new EventEmitter<string>();
+
   constructor() { }
 
   // Lifecyle hook that initializes the component
   ngOnInit(): void {
+    this.arrived.emit("You have arrived...");
   }
 }
